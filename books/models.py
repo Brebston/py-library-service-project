@@ -10,7 +10,7 @@ class Book(models.Model):
     author = models.CharField(max_length=255)
     cover = models.CharField(max_length=4, choices=Cover.choices, default=Cover.HARD)
     inventory = models.PositiveIntegerField()
-    daily_fee = models.DecimalField()
+    daily_fee = models.DecimalField(decimal_places=2, max_digits=10)
 
     def __str__(self):
         return f"Book: {self.title}, author: {self.author}, daily fee: {self.daily_fee}"
