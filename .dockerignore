@@ -1,0 +1,4 @@
+Dockerfile
+.idea
+__pycache__/
+docker-compose.yaml
